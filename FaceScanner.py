@@ -2,7 +2,7 @@ import cv2
 
 
 class FaceScanner:
-    def Scan():
+    def Scan(self):
         print("Scan Face")
         key = cv2. waitKey(1)
         webcam = cv2.VideoCapture(0)
@@ -42,7 +42,7 @@ class FaceScanner:
                     cv2.destroyAllWindows()
                     break
                 
-            except(KeyboardInterrupt):
+            except KeyboardInterrupt:
                 print("Turning off camera.")
                 webcam.release()
                 print("Camera off.")
